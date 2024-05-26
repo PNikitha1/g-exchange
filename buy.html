@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a Book - G-Exchange</title>
+    <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+    <header>
+        <div class="logo">G-Exchange</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container to display fetched data -->
+    <div id="book-list"></div>
+
+    <!-- JavaScript to fetch data using AJAX -->
+    <script>
+        // Function to fetch data from PHP script using AJAX
+        function fetchBooks() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        document.getElementById("book-list").innerHTML = this.responseText;
+                    } else {
+                        document.getElementById("book-list").innerHTML = "An error occurred while fetching the book list.";
+                    }
+                }
+            };
+            xhttp.open("GET", "fetch_books.php", true);
+            xhttp.send();
+        }
+
+        // Call the fetchBooks function when the page loads
+        window.onload = function() {
+            fetchBooks();
+        };
+    </script>
+
+    <footer>
+        <p>&copy; 2024 G-Exchange. All rights reserved.</p>
+    </footer>
+</body>
+</html>

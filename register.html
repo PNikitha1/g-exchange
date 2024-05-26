@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - G-Exchange</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh; /* Ensures that the body covers the entire viewport height */
+            display: flex;
+            flex-direction: column; /* Allows the footer to stick to the bottom */
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 1.5em;
+            margin-left: 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        
+        nav ul li a.active {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+        
+        /* Register Section Styles */
+        .register-section {
+            flex: 1; /* Takes up remaining vertical space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .register-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .register-container h2 {
+            margin-top: 0;
+        }
+        
+        .register-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .register-container label {
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        
+        .register-container input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .button {
+            padding: 10px;
+            color: white;
+            background-color:#333;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .register-container p {
+            margin-top: 20px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">G-Exchange</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="register-section">
+        <div class="register-container">
+            <h2>Register for G-Exchange</h2>
+            <form action="register.php" method="post">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" required>
+                <label for="roll-no">Roll Number</label>
+                <input type="text" id="roll-no" name="roll_number" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" required>
+                <button type="submit" class="button">Register</button>
+                <p>Already have an account? <a href="login.html">Login here</a>.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 G-Exchange. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

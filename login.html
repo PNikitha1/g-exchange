@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - G-Exchange</title>
+    <style>/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 1.5em;
+            margin-left: 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        
+        nav ul li a.active {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+        
+        /* Login Section Styles */
+        .login-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .login-container h2 {
+            margin-top: 0;
+        }
+        
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .login-container label {
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        
+        .login-container input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .button {
+            padding: 10px;
+            color: white;
+            background-color:#333;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .login-container p {
+            margin-top: 20px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+        </style>
+    <script>
+        function redirectToSellPage(event) {
+            event.preventDefault();  // Prevent form submission
+            window.location.href = "sell.html";  // Redirect to sell page
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">G-Exchange</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to G-Exchange</h2>
+            <form  action="login.php" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="button">Login</button>
+                <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 G-Exchange. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

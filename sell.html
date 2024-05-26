@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell a Book - G-Exchange</title>
+    <link rel="stylesheet" href="sell.css">
+</head>
+<body>
+    <header>
+        <div class="logo">G-Exchange</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sell-book">
+        <h2>Sell a Book or Notes</h2>
+        <form id="sell-form" method="post" action="sell.php" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Subject Name</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="subject-code">Subject Code</label>
+                <input type="text" id="subject-code" name="subject_code" pattern="[A-Za-z]{4}[0-9]{4}" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price (₹)</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" name="contact_name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="contact_phone" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="contact_email" required>
+            </div>
+            <div class="form-group">
+                <label for="upload">Upload Book or Notes</label>
+                <input type="file" id="upload" name="upload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </section>
+
+    
+
+    <!--<script src="sell.js"></script>-->
+	<footer>
+        <p>&copy; 2024 G-Exchange. All rights reserved.</p>
+    </footer>
+</body>
+</html>
